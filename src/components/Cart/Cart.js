@@ -11,11 +11,11 @@ const Cart = ({cart}) => {
         totalPrice = totalPrice + product.price;
         shipping = shipping + product.shipping;
     }
-    tax = (totalPrice * .2).toFixed(2);
-    grandTotal = totalPrice + shipping + tax;
+    tax = parseFloat((totalPrice * .2).toFixed(2));
+    grandTotal = (totalPrice + shipping + tax).toFixed(2);
    
     return (
-        <div className='cart'>
+        <div className='sticky top-20 p-2 '>
             <h4>Order Summary</h4>
             <p>Product: {cart.length}</p>
             <p>Total Price: {totalPrice}</p>

@@ -4,9 +4,9 @@ import header from './Header.css'
 
 const Header = () => {
     return (
-        <div className='header'>
+        <div className='header mb-10'>
             <img src={logo}></img>
-            <div>
+            <div className=''>
                 <a href="/shop">Shop</a>
                 <a href="/orders">Orders</a>
                 <a href="/inventory">Inventory</a>
