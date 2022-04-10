@@ -1,20 +1,44 @@
-import React from 'react';
-import { Link} from 'react-router-dom';
+import React, { useState } from 'react';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { Link, useNavigate} from 'react-router-dom';
+import auth from '../../firebase.init';
 import './Login.css';
 const Login = () => {
+    const [email,setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+      ] = useSignInWithEmailAndPassword(auth);
     
+    const navigate = useNavigate();
+    if (user) {
+        navigate('/shop');
+    }
+    const handleEmailBlur = event => {
+        setEmail(event.target.value)
+    }
+      const handlePasswordBlur = event => {
+        setPassword(event.target.value)
+    }
+    const handleUserSignIn = event => {
+        event.preventDefault();
+        signInWithEmailAndPassword(email, password);
+    }
     return (
         <div className='form-container'>
             <div className="">
                 <h2 className='form-title'>Login</h2>
-                <form action="">
+                <form action="" onSubmit={handleUserSignIn}>
                     <div className="input-group">
                         <label htmlFor="">E-mail</label>
-                        <input type="email" name="" id="" />
+                        <input onBlur={handleEmailBlur} type="email" name="" id="" />
                     </div>
                     <div className="input-group">
                         <label htmlFor="">Password</label>
-                        <input type="password" name="" id="" />
+                        <input onBlur={handlePasswordBlur} type="password" name="" id="" />
                     </div>
                     <input className='form-submit' type="submit" value="Login" />
                 </form>
