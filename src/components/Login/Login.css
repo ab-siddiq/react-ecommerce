@@ -6,7 +6,7 @@
     border-radius: 8px;
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 16px;
 }
 .form-title{
     font-size: 35px;
@@ -14,7 +14,7 @@
     color: #21414F;
 }
 .input-group{
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 .input-group label{
     display: block;
@@ -22,7 +22,7 @@
 }
 .input-group input{
     width: 415px;
-    height: 55px;
+    height: 45px;
     font-size: 24px;
     padding: 10px;
     box-sizing: border-box;
@@ -32,8 +32,8 @@
 
 .form-submit{
     width: 415px;
-    height: 55px;
-    font-size: 20px;
+    height: 45px;
+    font-size: 16px;
     background-color: rgba(255, 153, 0, 0.3);
     border-radius: 8px;
     border: none;
@@ -48,8 +48,8 @@
 .sign-in-with-google{
     display: block;
     width: 415px;
-    height: 55px;
-    font-size: 20px;
+    height: 45px;
+    font-size: 16px;
     background-color: coral;
     border-radius: 8px;
 }
@@ -63,6 +63,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 16px;
     margin-bottom: 9px;
 }
