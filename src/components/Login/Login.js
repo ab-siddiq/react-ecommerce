@@ -1,12 +1,8 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import './Login.css';
 const Login = () => {
-    const navigate = useNavigate();
-    const handleCreateNewAccount = () => {
-        const path = '../signup';
-        navigate(path);
-    }
+    
     return (
         <div className='form-container'>
             <div className="">
@@ -22,8 +18,13 @@ const Login = () => {
                     </div>
                     <input className='form-submit' type="submit" value="Login" />
                 </form>
-               <p className='create-account'>New to ema-john? <Link onClick={handleCreateNewAccount} className='form-link' to='signup'>Create a new account</Link></p>
-            
+               <p className='create-account'>New to ema-john? <Link  className='form-link' to='/signup'>Create a new account</Link></p>
+                <div className="or">
+                    <div className="line"></div>
+                    <p className='  '>OR</p>
+                    <div className="line"></div>
+                </div>
+                <button className='sign-in-with-google'>Continue With Google</button>
 
             </div>
         </div>
