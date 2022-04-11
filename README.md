@@ -6,7 +6,12 @@
 - `Local Storage` for cart data
 - `React Router` for navigating pages
 - `React Hook` for state management and api data load
+ - `useState()`
+ - `useEffect()`
+ - `useLocation()`
+ - `useNavigate()`
 - `Firebase` for user sing in, sign out
+ - Email sign in
 
 ### How to run this project in local host?
 
