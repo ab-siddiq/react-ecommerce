@@ -1,4 +1,5 @@
 # Simple E-commerce project with react
+# [LIVE](https://ema-john-simple-6ff77.firebaseapp.com/)
 ### What used in this project?
 - `React.js` to build this project
 - `Tailwind CSS` for UI design
